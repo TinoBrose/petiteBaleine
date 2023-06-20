@@ -1,6 +1,7 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+// import "mapbox-gl/dist/mapbox-gl.css";
 
 export const metadata = {
   title: "Rue de Brenilour",
@@ -14,6 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* <head>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </head> */}
       <body suppressHydrationWarning={true}>
         <Navbar />
         <div>{children}</div>

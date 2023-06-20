@@ -54,7 +54,7 @@ const ausstattung = [
     tag: ["kitchen"],
   },
   {
-    key: "microwave",
+    key: "fridge",
     name: "Kühlschrank",
     icon: undefined,
     tag: ["kitchen"],

@@ -59,13 +59,13 @@ export default function Home() {
         </div>
         <div className="mt-4">
           <Tab.Group>
-            <Tab.List className="flex flex-wrap items-center px-[24px] gap-4 sm:gap-12 justify-center">
+            <Tab.List className="flex flex-wrap items-center px-[24px] justify-center">
               {tabs.map(({ key, display }) => (
-                <Tab key={key} className="p-2">
+                <Tab key={key} className="p-1 sm:p-2 mx-[24px]">
                   {({ selected }) => (
                     <span
                       className={classNames(
-                        "uppercase text-l tracking-wider hover:text-accent pb-2 ",
+                        "uppercase text-sm sm:text-lg tracking-wider hover:text-accent pb-1 md:pb-2 ",
                         selected
                           ? "text-accent border-b-[1px] border-accent"
                           : "text-main_100"
@@ -77,7 +77,7 @@ export default function Home() {
                 </Tab>
               ))}
             </Tab.List>
-            <Tab.Panels className="h-full max-w-[900px] w-full p-2 sm:p-4 mb-2">
+            <Tab.Panels className="h-full max-w-[900px] w-full p-2 sm:p-4 mb-2 mx-auto">
               {tabs.map(({ key, component }) => (
                 <Tab.Panel key={key} className="p-2">
                   {component}
