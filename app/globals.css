@@ -6,6 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --main: #424c61;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -17,13 +20,9 @@
 } */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--main);
+  /* background: linear-gradient(to bottom, transparent, var(--main))
+    rgb(var(--background-start-rgb)); */
 }
 
 .navigation-wrapper {
@@ -84,26 +83,4 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.fader {
-  height: 350px;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
-}
-
-.fader__slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  object-fit: cover;
-}
-
-.fader img {
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
 }

@@ -4,12 +4,16 @@ import { useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
 import Image from "next/image";
+import studio_1 from "../../public/studio_1.jpg";
+import studio_2 from "../../public/studio_2.jpg";
+import studio_12 from "../../public/studio_12.jpg";
+import studio_14 from "../../public/studio_14.jpg";
 
-const images = [
-  "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+const imagesCarousel = [
+  { key: "studio_1", src: studio_1 },
+  { key: "studio_2", src: studio_2 },
+  { key: "studio_12", src: studio_12 },
+  { key: "studio_14", src: studio_14 },
 ];
 
 export default function BootstrapCarousel() {
@@ -20,7 +24,7 @@ export default function BootstrapCarousel() {
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
-      slides: images.length,
+      slides: imagesCarousel.length,
       loop: true,
       initial: 0,
       slideChanged(slider) {
@@ -70,14 +74,21 @@ export default function BootstrapCarousel() {
 
   return (
     <>
-      <div ref={sliderRef} className="fader">
-        {images.map((src, idx) => (
+      <div
+        ref={sliderRef}
+        className="h-[450px] relative overflow-hidden object-cover"
+      >
+        {imagesCarousel.map((img, idx) => (
           <div
-            key={idx}
-            className="fader__slide"
+            key={img.key}
+            className="w-full h-full absolute top-0 object-contain"
             style={{ opacity: opacities[idx] }}
           >
-            <img src={src} className="object-contain" />
+            <Image
+              src={img.src}
+              alt={img.key}
+              className="object-cover absolute w-full h-full bg-transparent"
+            />
           </div>
         ))}
         {loaded && instanceRef.current && (
