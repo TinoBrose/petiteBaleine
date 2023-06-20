@@ -113,7 +113,7 @@ export default function BootstrapCarousel() {
           </>
         )}
       </div>
-      {loaded && instanceRef.current && (
+      {/* {loaded && instanceRef.current && (
         <div className="dots">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
@@ -129,7 +129,7 @@ export default function BootstrapCarousel() {
             );
           })}
         </div>
-      )}
+      )} */}
     </>
   );
 }

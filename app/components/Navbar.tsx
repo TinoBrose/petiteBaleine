@@ -51,6 +51,15 @@ export default function Navbar() {
             }   items-center justify-between`}
           >
             <ul className="md:h-auto md:flex md:gap-6 cursor-pointer h-screen justify-center items-center">
+              <Link href="/" onClick={() => setNavbarOpen(!navbarOpen)}>
+                <li
+                  className={`${styles.navlink} ${
+                    pathname === "/" ? styles.active : ""
+                  }`}
+                >
+                  La petite baleine
+                </li>
+              </Link>
               <Link href="/gallery" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <li
                   className={`${styles.navlink} ${
