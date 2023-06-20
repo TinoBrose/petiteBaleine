@@ -5,13 +5,11 @@ const Uberblick = () => {
     <div>
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl ">La petite baleine</h1>
-        <div className="flex gap-4 text-main_80 mb-4">
-          <h3>2. Stöckige Ferienwohnung</h3>
-          <div>|</div>
+        <div className="flex flex-col md:flex-row gap-1 md:gap-4  text-main_80 mb-4">
+          <h3>2. Stöckige Ferienwohnung |</h3>
           <div>
-            <h3>1 Schlafzimmer</h3>
+            <h3>1 Schlafzimmer |</h3>
           </div>
-          <div>|</div>
           <div>
             <h3>1 Badezimmer</h3>
           </div>

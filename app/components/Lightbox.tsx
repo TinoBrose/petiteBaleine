@@ -5,7 +5,6 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgZoom from "lightgallery/plugins/zoom";
 import { StaticImageData } from "next/image";
-import test from "../../public/studio_12.jpg";
 
 const Lightbox = ({
   images,

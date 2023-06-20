@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
+import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import studio_1 from "../../public/studio_1.jpg";
 import studio_2 from "../../public/studio_2.jpg";
@@ -113,23 +113,6 @@ export default function BootstrapCarousel() {
           </>
         )}
       </div>
-      {/* {loaded && instanceRef.current && (
-        <div className="dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            );
-          })}
-        </div>
-      )} */}
     </>
   );
 }

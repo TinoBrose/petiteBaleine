@@ -1,8 +1,5 @@
 "use client";
-import { Inter } from "next/font/google";
 import Carousel from "./components/Carousel";
-import LinkCard from "./components/LinkCard";
-import ImageCard from "./components/ImageCard";
 import { TbGridDots } from "react-icons/tb";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
@@ -12,8 +9,6 @@ import Ausstattung from "./components/tabs/Ausstattung";
 import Lage from "./components/tabs/Lage";
 import Kalender from "./components/tabs/Kalender";
 import Richtlinien from "./components/tabs/Richtlinien";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const tabs = [
   {
@@ -50,22 +45,22 @@ export default function Home() {
         <div className="relative">
           <Carousel />
           <Link href="/gallery">
-            <div className="absolute w-[200px] h-[50px] bg-main_80 opacity-90 text-white  border-2 border-white rounded-xl right-0 md:right-20 left-0 md:left-auto bottom-20 mx-auto md:mx-0 flex justify-center items-center gap-2">
+            <div className="absolute w-[200px] h-[50px] bg-main_80 hover:opacity-90 text-white rounded-xl right-0 md:right-10 left-0 md:left-auto bottom-10 mx-auto md:mx-0 flex justify-center items-center gap-2">
               {/* <div className="absolute w-[200px] h-[50px] bg-main_100 right-0 bottom-0 mb-[60px] mr-[80px] flex"> */}
-              Alle Fotos ansehen
+              <div>Alle Fotos ansehen</div>
               <TbGridDots />
             </div>
           </Link>
         </div>
         <div className="mt-4">
           <Tab.Group>
-            <Tab.List className="flex flex-wrap items-center px-[24px] justify-center">
+            <Tab.List className="flex flex-wrap items-center gap-3 mx-2 justify-center">
               {tabs.map(({ key, display }) => (
-                <Tab key={key} className="p-1 sm:p-2 mx-[24px]">
+                <Tab key={key} className="p-1 sm:p-2 ">
                   {({ selected }) => (
                     <span
                       className={classNames(
-                        "uppercase text-sm sm:text-lg tracking-wider hover:text-accent pb-1 md:pb-2 ",
+                        "uppercase text-sm sm:text-md tracking-wider hover:text-accent pb-1 md:pb-2 ",
                         selected
                           ? "text-accent border-b-[1px] border-accent"
                           : "text-main_100"

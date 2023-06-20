@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
 import Carousel from "../components/Carousel";
 import LinkCard from "../components/LinkCard";
 import ImageCard from "../components/ImageCard";
 import { TbGridDots } from "react-icons/tb";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (

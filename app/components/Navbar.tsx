@@ -1,42 +1,77 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { usePathname } from "next/navigation";
+import laPetiteBaleine from "../../public/baleine.png";
+import Image from "next/image";
 
 const styles = {
   navlink:
     "text-l text-center hover:bg-white md:hover:bg-transparent md:hover:text-accent ",
   active: "text-accent",
+  navLinkSpecial: "text-l text-center hover:opacity-80  ",
 };
 
 export default function Navbar() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  console.log("pathname", pathname);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (prevScrollPos > currentScrollPos) {
+        setNavbarVisible(true);
+      } else {
+        setNavbarVisible(false);
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   return (
-    <nav className="w-full px-5 z-10 ">
+    <nav
+      className={`z-30 fixed top-0 bg-white w-full px-2 md:px-5 z-10 transition duration-500 drop-shadow-md ${
+        navbarVisible ? "translate-y-0" : "md:-translate-y-full"
+      }`}
+    >
       <div className="p-5">
         {/* LOGOTYPE */}
         <div className="inline md:flex w-full md:flex md:justify-around justify-between">
           <div className="flex md:flex-1 items-center justify-between w-full">
             <Link
               href="/"
-              onClick={() => setNavbarOpen(false)}
-              className="text-2xl font-bold "
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl md:text-3xl font-bold font-normal font-logo"
             >
-              Petite Baleine
+              <div className="flex justify-center items-center gap-1">
+                <Image
+                  src={laPetiteBaleine}
+                  width={40}
+                  height={40}
+                  alt="la petite baleine"
+                />
+                | la petite baleine
+              </div>
             </Link>
 
             {/* MOBILE */}
             <div className="md:hidden flex justify-center items-center">
               <button
                 className=" rounded-md"
-                onClick={() => setNavbarOpen(!navbarOpen)}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                {navbarOpen ? (
+                {mobileMenuOpen ? (
                   <HiOutlineX size={30} />
                 ) : (
                   <HiOutlineMenu size={30} />
@@ -47,64 +82,51 @@ export default function Navbar() {
 
           <div
             className={`md:block ${
-              navbarOpen ? "block" : "hidden"
+              mobileMenuOpen ? "block" : "hidden"
             }   items-center justify-between`}
           >
-            <ul className="md:h-auto md:flex md:gap-6 cursor-pointer h-screen justify-center items-center">
-              <Link href="/" onClick={() => setNavbarOpen(!navbarOpen)}>
+            <ul
+              className={`md:h-auto md:flex md:gap-6 cursor-pointer h-screen justify-center items-center uppercase `}
+            >
+              <Link href="/" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 <li
                   className={`${styles.navlink} ${
                     pathname === "/" ? styles.active : ""
-                  }`}
+                  } ${mobileMenuOpen ? "py-4" : ""}`}
                 >
-                  La petite baleine
+                  Apartment
                 </li>
               </Link>
-              <Link href="/gallery" onClick={() => setNavbarOpen(!navbarOpen)}>
+              <Link
+                href="/gallery"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
                 <li
                   className={`${styles.navlink} ${
                     pathname === "/gallery" ? styles.active : ""
-                  }`}
+                  }${mobileMenuOpen ? "py-4" : ""}`}
                 >
                   Galerie
                 </li>
               </Link>
-              {/* <Link
-                href="/petite-baleine"
-                onClick={() => setNavbarOpen(!navbarOpen)}
+              <Link
+                href="/bretagne"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                <li
-                  className={`${styles.navlink} ${
-                    pathname === "/petite-baleine" ? styles.active : ""
-                  }`}
-                >
-                  Petite Baleine
-                </li>
-              </Link> */}
-              {/* <Link
-                href="/grande-baleine"
-                onClick={() => setNavbarOpen(!navbarOpen)}
-              >
-                <li
-                  className={`${styles.navlink} ${
-                    pathname === "/grande-baleine" ? styles.active : ""
-                  }`}
-                >
-                  Grande Baleine
-                </li>
-              </Link> */}
-              <Link href="/bretagne" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <li
                   className={`${styles.navlink} ${
                     pathname === "/bretagne" ? styles.active : ""
-                  }`}
+                  }${mobileMenuOpen ? "py-4" : ""}`}
                 >
                   La Bretagne
                 </li>
               </Link>
-              <Link href="/anfrage" onClick={() => setNavbarOpen(!navbarOpen)}>
+              <Link
+                href="/anfrage"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
                 <li
-                  className={`${styles.navlink} ${
+                  className={`${styles.navLinkSpecial} ${
                     pathname === "/anfrage" ? styles.active : ""
                   } bg-main_80 text-white px-4 py-2 rounded-lg flex justify-center items-center`}
                 >
