@@ -67,9 +67,8 @@ const Lage = () => {
     // create a DOM element for the marker
   }, []);
 
-  console.log(process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN);
   return (
-    <div className="flex flex-col gap-[36px] h-[400px] w-full">
+    <div className="flex flex-col gap-[36px] h-[400px] w-full px-2 md:px-0">
       <div>
         <h1 className="text-2xl mb-[36px]">Adresse</h1>
         <div>8, Rue de Brenilour</div>

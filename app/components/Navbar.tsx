@@ -86,7 +86,7 @@ export default function Navbar() {
             }   items-center justify-between`}
           >
             <ul
-              className={`md:h-auto md:flex md:gap-6 cursor-pointer h-screen justify-center items-center uppercase `}
+              className={`md:h-[80px] flex flex-col md:flex-row md:gap-6 cursor-pointer h-[350px] my-10 md:my-0 justify-between md:justify-center items-center uppercase `}
             >
               <Link href="/" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 <li
@@ -104,7 +104,7 @@ export default function Navbar() {
                 <li
                   className={`${styles.navlink} ${
                     pathname === "/gallery" ? styles.active : ""
-                  }${mobileMenuOpen ? "py-4" : ""}`}
+                  } ${mobileMenuOpen ? "py-4" : ""}`}
                 >
                   Galerie
                 </li>
@@ -116,7 +116,7 @@ export default function Navbar() {
                 <li
                   className={`${styles.navlink} ${
                     pathname === "/bretagne" ? styles.active : ""
-                  }${mobileMenuOpen ? "py-4" : ""}`}
+                  } ${mobileMenuOpen ? "py-4" : ""}`}
                 >
                   La Bretagne
                 </li>
@@ -128,15 +128,15 @@ export default function Navbar() {
                 <li
                   className={`${styles.navLinkSpecial} ${
                     pathname === "/anfrage" ? styles.active : ""
-                  } bg-main_80 text-white px-4 py-2 rounded-lg flex justify-center items-center`}
+                  } ${
+                    mobileMenuOpen ? "py-4" : ""
+                  } bg-main_80 text-white px-4 py-4 rounded-lg flex justify-center items-center`}
                 >
                   Anfrage
                 </li>
               </Link>
             </ul>
           </div>
-
-          {/* LINKS */}
         </div>
       </div>
     </nav>

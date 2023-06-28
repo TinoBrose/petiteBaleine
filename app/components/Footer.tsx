@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="bg-main_100 text-white h-100 mt-5 justify-center align-center">
-        <div className="py-5 flex flex-col md:flex-row md:justify-around w-full">
+        <div className="py-5 flex flex-col md:flex-row items-center md:items-start text-center md:text-start gap-6 md:gap-2 md:justify-around w-full">
           {/* LINKS */}
           <Link
             href="/"
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-main_100 h-100 flex flex-row justify-center align-center gap-5 border-t-[1px] border-white text-white py-2">
+      <div className="bg-main_100 h-100 flex flex-row flex-wrap justify-center align-center gap-5 border-t-[1px] border-white text-white py-2">
         <div className="text-xm hover:text-main_60 py-1">
           © la petite baleine
         </div>

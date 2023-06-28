@@ -12,14 +12,12 @@ export default function Home() {
           <Carousel />
           <Link href="/gallery">
             <div className="absolute w-[200px] h-[50px] bg-main_80 opacity-90 text-white  border-2 border-white rounded-xl right-0 md:right-20 left-0 md:left-auto bottom-20 mx-auto md:mx-0 flex justify-center items-center gap-2">
-              {/* <div className="absolute w-[200px] h-[50px] bg-main_100 right-0 bottom-0 mb-[60px] mr-[80px] flex"> */}
               Alle Fotos ansehen
               <TbGridDots />
             </div>
           </Link>
         </div>
         <div className="flex flex-col gap-2 items-center justify-between mt-10 px-8 md:px-24 mx-5 gap-[48px]">
-          {/* <div className="flex flex-col items-center justify-between p-24 mx-5 bg-gray-100"> */}
           <h1 className="text-2xl font-bold">Rue de Brenilour</h1>
           <div className="text-center">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

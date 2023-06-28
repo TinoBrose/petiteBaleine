@@ -7,9 +7,11 @@ import Image from "next/image";
 import studio_1 from "../../public/studio_1.jpg";
 import studio_2 from "../../public/studio_2.jpg";
 import studio_12 from "../../public/studio_12.jpg";
+import studio_13 from "../../public/studio_13.jpg";
 import studio_14 from "../../public/studio_14.jpg";
 
 const imagesCarousel = [
+  { key: "studio_13", src: studio_13 },
   { key: "studio_1", src: studio_1 },
   { key: "studio_2", src: studio_2 },
   { key: "studio_12", src: studio_12 },
