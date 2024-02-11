@@ -7,7 +7,7 @@ const Ausstattung = () => {
     <div>
       <div className="flex flex-col gap-[36px] px-2 md:px-0">
         <div>
-          <h1 className="text-2xl mb-8 ">Ausstattung auf einen Blick</h1>
+          <h1 className="text-xl mb-4 ">Ausstattung auf einen Blick</h1>
           <div className="flex flex-wrap gap-4 ">
             {ausstattung
               .filter((item) => item.tag.includes("general"))

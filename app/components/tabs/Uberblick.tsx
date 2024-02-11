@@ -26,7 +26,7 @@ const Uberblick = () => {
             Regenschauern zu Frühjahrs- und Herbstzeiten bis zu seltenen Frösten im Winter. Dank
             einer guten modernen Heizung können wir uns immer gemütlich ins Haus zurückziehen.
             Bei warmen Temperaturen kann man sich im Garten unter den schönen alten Bäumen
-            im Schatten aufhalten undnatürlich auch die Sonne anbeten.
+            im Schatten aufhalten und natürlich auch die Sonne anbeten.
           </p>
           <p>
             Das Studio, ein Annexe zum Haupthaus mit separatem Eingang, wurde 2022 neu

@@ -41,9 +41,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`z-30 fixed top-0 bg-white w-full px-2 md:px-5 z-10 transition duration-500 drop-shadow-md ${
-        navbarVisible ? "translate-y-0" : "md:-translate-y-full"
-      }`}
+      className={`z-30 fixed top-0 bg-white w-full px-2 md:px-5 z-10 transition duration-500 drop-shadow-md ${navbarVisible ? "translate-y-0" : "md:-translate-y-full"
+        }`}
     >
       <div className="p-5">
         {/* LOGOTYPE */}
@@ -81,18 +80,16 @@ export default function Navbar() {
           </div>
 
           <div
-            className={`md:block ${
-              mobileMenuOpen ? "block" : "hidden"
-            }   items-center justify-between`}
+            className={`md:block ${mobileMenuOpen ? "block" : "hidden"
+              }   items-center justify-between`}
           >
             <ul
               className={`md:h-[80px] flex flex-col md:flex-row md:gap-6 cursor-pointer h-[350px] my-10 md:my-0 justify-between md:justify-center items-center uppercase `}
             >
               <Link href="/" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 <li
-                  className={`${styles.navlink} ${
-                    pathname === "/" ? styles.active : ""
-                  } ${mobileMenuOpen ? "py-4" : ""}`}
+                  className={`${styles.navlink} ${pathname === "/" ? styles.active : ""
+                    } ${mobileMenuOpen ? "py-4" : ""}`}
                 >
                   Apartment
                 </li>
@@ -102,14 +99,13 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <li
-                  className={`${styles.navlink} ${
-                    pathname === "/gallery" ? styles.active : ""
-                  } ${mobileMenuOpen ? "py-4" : ""}`}
+                  className={`${styles.navlink} ${pathname === "/gallery" ? styles.active : ""
+                    } ${mobileMenuOpen ? "py-4" : ""}`}
                 >
                   Galerie
                 </li>
               </Link>
-              <Link
+              {/* <Link
                 href="/bretagne"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
@@ -120,17 +116,15 @@ export default function Navbar() {
                 >
                   La Bretagne
                 </li>
-              </Link>
+              </Link> */}
               <Link
                 href="/anfrage"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <li
-                  className={`${styles.navLinkSpecial} ${
-                    pathname === "/anfrage" ? styles.active : ""
-                  } ${
-                    mobileMenuOpen ? "py-4" : ""
-                  } bg-main_80 text-white px-4 py-4 rounded-lg flex justify-center items-center`}
+                  className={`${styles.navLinkSpecial} ${pathname === "/anfrage" ? styles.active : ""
+                    } ${mobileMenuOpen ? "py-4" : ""
+                    } bg-main_80 text-white px-4 py-4 rounded-lg flex justify-center items-center`}
                 >
                   Anfrage
                 </li>

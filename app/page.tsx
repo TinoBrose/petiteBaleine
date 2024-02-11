@@ -7,7 +7,7 @@ import classNames from "classnames";
 import Uberblick from "./components/tabs/Uberblick";
 import Ausstattung from "./components/tabs/Ausstattung";
 import Lage from "./components/tabs/Lage";
-import Kalender from "./components/tabs/Kalender";
+import Kosten from "./components/tabs/Kosten";
 import Richtlinien from "./components/tabs/Richtlinien";
 
 const tabs = [
@@ -27,9 +27,9 @@ const tabs = [
     component: <Lage />,
   },
   {
-    key: "kalender",
-    display: "Kalender",
-    component: <Kalender />,
+    key: "Kosten",
+    display: "Kosten",
+    component: <Kosten />,
   },
   {
     key: "richtlinien",

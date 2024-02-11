@@ -33,7 +33,7 @@ const Lage = () => {
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/outdoors-v12",
       center: [-4.5, 48.0], // center map on Chad
-      zoom: 7.5,
+      zoom: 8,
     });
     const geojson = {
       type: "Feature",
@@ -68,13 +68,28 @@ const Lage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[36px] h-[400px] w-full px-2 md:px-0">
+    <div className="flex flex-col gap-2 px-2 md:px-0">
       <div>
-        <h1 className="text-2xl mb-[36px]">Adresse</h1>
-        <div>8, Rue de Brenilour</div>
-        <div>29780 Plouhinec, Frankreich</div>
+        <div className="flex flex-col gap-[36px]">
+          <p>
+            Etwa zwei Kilometer Luftlinie entfernt sehen und hören wir auch oft den Atlantik. An die
+            nahen Strände kommt man bergabwärts zu Fuß, per Fahrrad oder Auto. An Kersiny,
+            Mesperleuc, Gwendrez und vielen Stränden weiter nach Norden oder Süden findet jeder
+            seinen idealen Ort zum Chillen im Sand, zum Surfen, Segeln, Standup-paddeln ...
+          </p>
+          <div className="border-t-[1px] border-accent"></div>
+
+          <div className="flex flex-col gap-1  text-main_80 mb-4">
+            <h1 className="text-2xl mb-4">Adresse</h1>
+
+            <h3>8, Rue de Brenilour</h3>
+            <h3>29780 Plouhinec, Frankreich</h3>
+          </div>
+
+        </div>
+        <div className="h-[500px] w-[100%]" ref={mapContainer} />
+
       </div>
-      <div className="h-[100%] w-[100%]" ref={mapContainer} />
     </div>
   );
 };
