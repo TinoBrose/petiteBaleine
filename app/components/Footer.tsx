@@ -31,7 +31,7 @@ export default function Footer() {
                   <li className='py-1 text-sm hover:text-main_70'>Apartment</li>
                 </Link>
                 <Link href='/gallery' onClick={() => {}}>
-                  <li className='py-1 text-sm hover:text-main_70'>Gallerie</li>
+                  <li className='py-1 text-sm hover:text-main_70'>Galerie</li>
                 </Link>
                 <Link href='/anfrage' onClick={() => {}}>
                   <li className='py-1 text-sm hover:text-main_70'>Anfrage</li>

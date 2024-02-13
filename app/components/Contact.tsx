@@ -1,8 +1,13 @@
 'use client';
-import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
+
   async function handleSubmit(event: any) {
+    setIsLoading(true);
     event.preventDefault();
     const formData = new FormData(event.target);
     try {
@@ -18,15 +23,20 @@ export default function Contact() {
       const responseData = await response.json();
       console.log(responseData['message']);
 
-      alert(
-        'Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen.'
-      );
+      event.target.reset();
+      setShowFeedback(true);
+      setIsSuccess(true);
     } catch (err) {
       console.error(err);
-      alert(
-        'Leider ist etwas schief gelaufen. Bitte probieren Sie es später noch einmal oder schicken Sie uns direkt eine E-Mail an: anfrage.petite-baleine@gmail.com'
-      );
+      setShowFeedback(true);
+      setIsSuccess(false);
     }
+    setIsLoading(false);
+
+    setTimeout(() => {
+      setShowFeedback(false);
+      setIsSuccess(false);
+    }, 10000);
   }
 
   return (
@@ -96,12 +106,26 @@ export default function Contact() {
         </div>
 
         <button
-          className='hover:shadow-form rounded-md bg-main_80 px-8 py-3 text-base font-semibold text-white outline-none'
+          className='hover:shadow-form relative rounded-md bg-main_80 px-8 py-3 text-base font-semibold text-white outline-none'
           type='submit'
         >
-          Anfragen
+          <div className='button-content flex items-center justify-center'>
+            {isLoading ? (
+              <div className='spinner border-gray-200 h-2 w-2 animate-spin rounded-full border-b-4 border-t-4'></div>
+            ) : (
+              'Anfragen'
+            )}
+          </div>
         </button>
       </form>
+
+      {showFeedback && (
+        <div className={`mt-4 ${isSuccess ? 'text-success' : 'text-fail'}`}>
+          {isSuccess
+            ? 'Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen.'
+            : 'Leider ist etwas schief gelaufen. Bitte probieren Sie es später noch einmal oder schicken Sie uns direkt eine E-Mail an: anfrage.petite-baleine@gmail.com'}
+        </div>
+      )}
     </div>
   );
 }

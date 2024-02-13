@@ -15,6 +15,8 @@ module.exports = {
       main_80: '#667A9F',
       main_70: '#9DB1D5',
       accent: '#F16A36',
+      success: '#4BB543',
+      fail: '#FC100D',
     },
     extend: {
       backgroundImage: {
