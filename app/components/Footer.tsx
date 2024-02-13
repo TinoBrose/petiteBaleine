@@ -6,7 +6,7 @@ import laPetiteBaleine from '../../public/baleine.png';
 export default function Footer() {
   return (
     <footer>
-      <div className='flex items-center py-2 mt-5 bg-main_100 text-white'>
+      <div className='mt-5 flex items-center bg-main_100 py-2 text-white'>
         <div className='flex w-full flex-col items-center gap-6 py-5 text-center md:flex-row md:items-start md:justify-around md:gap-2 md:text-start'>
           {/* LINKS */}
           <Link
@@ -28,9 +28,7 @@ export default function Footer() {
             <div>
               <ul className='cursor-pointer flex-row'>
                 <Link href='/' onClick={() => {}}>
-                  <li className='py-1 text-sm hover:text-main_70'>
-                    Apartment
-                  </li>
+                  <li className='py-1 text-sm hover:text-main_70'>Apartment</li>
                 </Link>
                 <Link href='/gallery' onClick={() => {}}>
                   <li className='py-1 text-sm hover:text-main_70'>Gallerie</li>
@@ -46,7 +44,9 @@ export default function Footer() {
             <div>
               <ul className='flex-row'>
                 <li className='py-1 text-sm'>Judy & Matthias Brose</li>
-                <li className='py-1 text-sm'>Mail: info@petite-baleine.de</li>
+                <li className='py-1 text-sm'>
+                  Mail: anfrage.petite-baleine@gmail.com
+                </li>
                 <li className='py-1 text-sm'>Telefon FR: +33 (0) 638175281</li>
               </ul>
             </div>
