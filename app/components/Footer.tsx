@@ -24,8 +24,8 @@ export default function Footer() {
             </div>
           </Link>
 
-          <div>
-            <div className=''>
+          <div className='flex items-center'>
+            <div>
               <ul className='cursor-pointer flex-row'>
                 <Link href='/' onClick={() => {}}>
                   <li className='py-1 text-sm hover:text-main_70'>
@@ -46,8 +46,8 @@ export default function Footer() {
             <div>
               <ul className='flex-row'>
                 <li className='py-1 text-sm'>Judy & Matthias Brose</li>
-                <li className='py-1 text-sm'>M: info@petite-baleine.de</li>
-                <li className='py-1 text-sm'>T: 011111</li>
+                <li className='py-1 text-sm'>Mail: info@petite-baleine.de</li>
+                <li className='py-1 text-sm'>Telefon FR: +33 (0) 638175281</li>
               </ul>
             </div>
           </div>
