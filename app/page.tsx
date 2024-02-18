@@ -41,7 +41,7 @@ const tabs = [
 export default function Home() {
   return (
     <>
-      <main className='-1 container mx-auto'>
+      <main className='container mx-auto'>
         <div className='relative'>
           <Carousel />
           <Link href='/gallery'>

@@ -1,4 +1,4 @@
-import { NextResponse, NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 const nodemailer = require('nodemailer');
 
 // Handles POST requests to /api
@@ -6,13 +6,15 @@ const nodemailer = require('nodemailer');
 export async function POST(request) {
   const username = process.env.NEXT_PUBLIC_BURNER_USERNAME;
   const password = process.env.NEXT_PUBLIC_BURNER_PASSWORD;
-  const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
 
   console.log('dealing with request');
   const formData = await request.formData();
   const name = formData.get('name');
   const email = formData.get('email');
+  const start = formData.get('start');
+  const end = formData.get('end');
   const message = formData.get('message');
+
 
   // create transporter object
   const transporter = nodemailer.createTransport({
@@ -30,10 +32,11 @@ export async function POST(request) {
       from: username,
       to: username,
       replyTo: email,
-      subject: `Anfrage via Website - ${email}`,
+      subject: `Anfrage von ${name}: ${start} - ${end}`,
       html: `
             <p>Name: ${name} </p>
             <p>Email: ${email} </p>
+            <p>Von: ${start} bis: ${end}</p>
             <p>Message: ${message} </p>
             `,
     });
@@ -45,7 +48,4 @@ export async function POST(request) {
   }
 }
 
-// export async function POST(req: Request) {
-//   console.log(req.body);
-//   return new Response('Hello, Next.js!')
-// }
+

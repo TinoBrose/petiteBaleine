@@ -1,10 +1,14 @@
 'use client';
 import { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [endDate, setEndDate] = useState<Date | null>(null);
 
   async function handleSubmit(event: any) {
     setIsLoading(true);
@@ -44,7 +48,7 @@ export default function Contact() {
       <form onSubmit={handleSubmit}>
         <div className='my-5'>
           <label
-            htmlFor='form-message'
+            htmlFor='form-name'
             className='mb-3 block text-base text-sm text-main_80'
           >
             Name:
@@ -78,8 +82,12 @@ export default function Contact() {
           />
         </div>
         {/* <div className='mb-5'>
-          <label htmlFor='form-time'             className='mb-3 block text-base text-sm text-main_80'
-> Zeitraum </label>
+          <label
+            htmlFor='form-time'
+            className='mb-3 block text-base text-sm text-main_80'
+          >
+            Zeitraum
+          </label>
           <input
             required
             id='form-time'
@@ -88,6 +96,49 @@ export default function Contact() {
             className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
           />
         </div> */}
+        <div className='mb-5'>
+          <label
+            htmlFor='form-time'
+            className='mb-3 block text-base text-sm text-main_80'
+          >
+            Zeitraum
+          </label>
+          {/* <DatePicker
+            id='form-time'
+            name='time'
+            placeholderText='Geben Sie den gewünschten Zeitraum ein'
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
+          /> */}
+          <div className='flex items-center'>
+            <DatePicker
+              id='form-start-time'
+              name='start'
+              placeholderText='Startdatum'
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              selectsStart
+              startDate={startDate}
+              endDate={endDate}
+              className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
+            />
+            <span className='mx-2 flex h-full items-center'>bis</span>
+
+            <DatePicker
+              id='form-end-time'
+              name='end'
+              placeholderText='Enddatum'
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              selectsEnd
+              startDate={startDate}
+              endDate={endDate}
+              minDate={startDate}
+              className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
+            />
+          </div>
+        </div>
         <div className='mb-5'>
           <label
             htmlFor='form-message'

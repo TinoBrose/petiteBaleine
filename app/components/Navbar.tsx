@@ -109,18 +109,18 @@ export default function Navbar() {
                   Galerie
                 </li>
               </Link>
-              {/* <Link
-                href="/bretagne"
+              <Link
+                href='/bretagne'
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <li
                   className={`${styles.navlink} ${
-                    pathname === "/bretagne" ? styles.active : ""
-                  } ${mobileMenuOpen ? "py-4" : ""}`}
+                    pathname === '/bretagne' ? styles.active : ''
+                  } ${mobileMenuOpen ? 'py-4' : ''}`}
                 >
                   La Bretagne
                 </li>
-              </Link> */}
+              </Link>
               <Link
                 href='/anfrage'
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
