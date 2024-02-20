@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import laPetiteBaleine from '../../public/baleine.png';
+import { MdOutlineEmail } from 'react-icons/md';
 
 export default function Footer() {
   return (
@@ -45,7 +46,12 @@ export default function Footer() {
               <ul className='flex-row'>
                 <li className='py-1 text-sm'>Judy & Matthias Brose</li>
                 <li className='py-1 text-sm'>
-                  Mail: info.petitebaleine@gmail.com
+                  <div className='flex flex-row items-center gap-2'>
+                    <div>
+                      <MdOutlineEmail />
+                    </div>
+                    <div>info.petitebaleine@gmail.com</div>
+                  </div>
                 </li>
               </ul>
             </div>
