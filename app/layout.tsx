@@ -3,8 +3,6 @@ import Navbar from './components/Navbar';
 import './globals.css';
 import { Nunito, Great_Vibes } from 'next/font/google';
 
-// import "mapbox-gl/dist/mapbox-gl.css";
-
 const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',

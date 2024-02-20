@@ -2,7 +2,6 @@ import {
   HiOutlineWifi,
   HiOutlineArrowsExpand,
   HiFire,
-  HiOutlineChevronRight,
 } from 'react-icons/hi';
 import { HiTv } from 'react-icons/hi2';
 import { MdSmokeFree } from 'react-icons/md';

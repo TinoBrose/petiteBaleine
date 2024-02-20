@@ -81,21 +81,6 @@ export default function Contact() {
             className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
           />
         </div>
-        {/* <div className='mb-5'>
-          <label
-            htmlFor='form-time'
-            className='mb-3 block text-base text-sm text-main_80'
-          >
-            Zeitraum
-          </label>
-          <input
-            required
-            id='form-time'
-            name='time'
-            placeholder='Geben Sie den gewünschten Zeitraum ein'
-            className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
-          />
-        </div> */}
         <div className='mb-5'>
           <label
             htmlFor='form-time'
@@ -103,14 +88,6 @@ export default function Contact() {
           >
             Zeitraum
           </label>
-          {/* <DatePicker
-            id='form-time'
-            name='time'
-            placeholderText='Geben Sie den gewünschten Zeitraum ein'
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            className='w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base text-sm text-[#6B7280] outline-none focus:border-main_80 focus:shadow-md'
-          /> */}
           <div className='flex items-center'>
             <DatePicker
               id='form-start-time'
@@ -174,7 +151,7 @@ export default function Contact() {
         <div className={`mt-4 ${isSuccess ? 'text-success' : 'text-fail'}`}>
           {isSuccess
             ? 'Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen.'
-            : 'Leider ist etwas schief gelaufen. Bitte probieren Sie es später noch einmal oder schicken Sie uns direkt eine E-Mail an: anfrage.petite-baleine@gmail.com'}
+            : 'Leider ist etwas schief gelaufen. Bitte probieren Sie es später noch einmal oder schicken Sie uns direkt eine E-Mail an: info.petitebaleine@gmail.com'}
         </div>
       )}
     </div>

@@ -118,7 +118,7 @@ export default function Navbar() {
                     pathname === '/bretagne' ? styles.active : ''
                   } ${mobileMenuOpen ? 'py-4' : ''}`}
                 >
-                  La Bretagne
+                  Bretagne
                 </li>
               </Link>
               <Link

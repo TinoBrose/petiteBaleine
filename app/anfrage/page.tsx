@@ -6,7 +6,7 @@ import Script from 'next/script';
 // import Contact from '../components/Contact';
 import dynamic from 'next/dynamic';
 const Contact: any = dynamic(() => import('../components/Contact'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <p>Lädt...</p>,
   ssr: false,
 });
 
@@ -31,14 +31,4 @@ export default function Anfrage() {
       </div>
     </main>
   );
-}
-
-{
-  /* <h1 className='text-2xl mt-4'>Kontakt</h1>
-
-      <div className='my-4 flex flex-col items-center gap-1  text-main_80 md:gap-2'>
-        <h3>Judy & Matthias Brose</h3>
-        <h3>Mail: anfrage.petite-baleine@gmail.com</h3>
-        <h3>Telefon FR: +33 (0) 638175281</h3>
-      </div> */
 }
