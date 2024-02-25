@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import petiteBaleine from '../../public/petite_baleine.jpg';
 
 const Uberblick = () => {
   return (
@@ -18,7 +19,6 @@ const Uberblick = () => {
         <div className='border-t-[1px] border-accent'></div>
         <div className='flex flex-col gap-4 py-4'>
           <p>
-            Studio für 2 Personen in Frankreich Bretagne Finistère Plouhinec
             Versteckt in den kleinen Nebenstraßen von Plouhinec liegt unser
             bretonisches Traumhaus aus alten Steinen, blauen Fensterläden und
             mit einem großen Garten. Im Haus haben wir mit separatem Eingang
@@ -35,21 +35,21 @@ const Uberblick = () => {
         <div className='border-t-[1px] border-accent'></div>
         <div className='flex flex-col gap-4 py-4'>
           <p>
-            Sie finden im Erdgeschoss eine voll eingerichtete Küche mit Theke
-            und zwei Sitzplätzen und einem Wohnbereich mit Sessel und Sofa vor.
-            Über eine kleine gewundene Treppe eröffnet sich Ihnen das
-            Schlafzimmer mit bodengroßem breiten Schiebefenster mit etwas Blick
-            auf den Atlantik und unseren schönen Garten mit alten Bäumen und
-            dicken Hortensienblüten. Dort oben geht es dann in ein großes
-            Badezimmer mit Dusche, Waschbecken und WC. Wasch- und
-            Trockenmöglichkeiten gibt es auf Wunsch in der angrenzenden Garage,
-            wenn man nicht die kleinen Waschsalons in der Nachbarschaft
-            aufsuchen möchte. Bettwäsche (155x220 oder 240x260) kann gegen
-            Gebühr gestellt werden, ebenso Handtücher für Bad und Küche.
-            Strandtücher sind selbst mitzubringen. Strom wird per Ablesung (Foto
-            vom Zähler bei Ein- und Auszug) berechnet. Per Verlängerungskabel
-            konnten Gäste auch schon ihr E-Auto nachts aufladen. WLan ist
-            vorhanden. Für Tiere ist das Studio nicht geeignet.
+            Im Erdgeschoss befindet sich eine voll eingerichtete Küche mit Theke
+            und zwei Sitzplätzen und einem Wohnbereich mit Sessel und Sofa. Über
+            eine kleine gewundene Treppe kommen Sie ins Schlafzimmer mit
+            bodengroßem breiten Schiebefenster mit etwas Blick auf den Atlantik
+            und unseren schönen Garten mit alten Bäumen und dicken
+            Hortensienblüten. Dort oben geht es dann in ein großes Badezimmer
+            mit Dusche, Waschbecken und WC. Wasch- und Trockenmöglichkeiten gibt
+            es auf Wunsch in der angrenzenden Garage, wenn man nicht die kleinen
+            Waschsalons in der Nachbarschaft aufsuchen möchte. Bettwäsche
+            (155x220 oder 240x260) kann gegen Gebühr gestellt werden, ebenso
+            Handtücher für Bad und Küche. Strandtücher sind selbst mitzubringen.
+            Strom wird per Ablesung (Foto vom Zähler bei Ein- und Auszug)
+            berechnet. Per Verlängerungskabel konnten Gäste auch schon ihr
+            E-Auto nachts aufladen. WLan ist vorhanden. Für Tiere ist das Studio
+            nicht geeignet.
           </p>
 
           <Link href='/anfrage' className='max-w-[150px] '>
@@ -60,15 +60,20 @@ const Uberblick = () => {
         </div>
         <div className='border-t-[1px] border-accent'></div>
         <div className='flex flex-col gap-4 py-4'>
-          <h3 className='text-main_80'>
-            Warum Petite Baleine – kleiner Wal? Foto!
-          </h3>
+          <h3 className='text-main_80'>Warum Petite Baleine – kleiner Wal?</h3>
           <p>
             Keine Angst, Wale gibt’s hier nicht. Aber wir haben im Garten ein
             großes Strandfundstück, das aus der richtigen Perspektive wie ein
             kleiner Wal aussieht. Und manchmal auch wie ein Ente oder ein
             schlafendes Kamel ...
           </p>
+        </div>
+        <div className='h-[400] flex-1 '>
+          <img
+            src='/petite_baleine.jpg'
+            alt='Petite Baleine'
+            className='object-contain'
+          />
         </div>
       </div>
     </div>

@@ -211,6 +211,18 @@ export const ausstattung = [
     tag: ['sleeping'],
   },
   {
+    key: 'shelf',
+    name: 'Regal',
+    icon: undefined,
+    tag: ['sleeping'],
+  },
+  {
+    key: 'clothesRail',
+    name: 'Kleiderstange',
+    icon: undefined,
+    tag: ['sleeping'],
+  },
+  {
     key: 'shower',
     name: 'Dusche',
     icon: undefined,
