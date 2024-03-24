@@ -78,9 +78,6 @@ export default function Home() {
                   {component}
                 </Tab.Panel>
               ))}
-              <Tab.Panel>
-                <div>test</div>
-              </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
         </div>

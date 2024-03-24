@@ -26,14 +26,7 @@ const Uberblick = () => {
             Erdgeschoss und Schlafzimmer und großzügigem Bad im Obergeschoß
             gezaubert. Durchs große Gaubenfenster ist das Meer zu entdecken.
           </p>
-          <p>
-            Das Studio ist Teil unseres größeren Hauses, unserem Zweitwohnsitz.
-            Daher teilt man sich zeitweise den Garten, vor dem Studio ist ein
-            eigener Bereich.
-          </p>
-        </div>
-        <div className='border-t-[1px] border-accent'></div>
-        <div className='flex flex-col gap-4 py-4'>
+
           <p>
             Im Erdgeschoss befindet sich eine voll eingerichtete Küche mit Theke
             und zwei Sitzplätzen und einem Wohnbereich mit Sessel und Sofa. Über
@@ -52,15 +45,23 @@ const Uberblick = () => {
             nicht geeignet.
           </p>
 
-          <Link href='/anfrage' className='max-w-[150px] '>
-            <div className='flex items-center justify-center rounded-lg bg-main_80 px-4 py-4 text-white'>
+          <p>
+            Das Studio ist Teil unseres größeren Hauses, unserem Zweitwohnsitz.
+            Daher teilt man sich zeitweise den Garten, vor dem Studio ist ein
+            eigener Bereich.
+          </p>
+        </div>
+        <div className='flex flex-col items-center justify-center gap-4 pb-4'>
+          <Link href='/anfrage' className='w-[250px] '>
+            <div className='flex items-center justify-center rounded-lg bg-main_80 px-4 py-4 text-lg text-white hover:opacity-90'>
               Jetzt anfragen
             </div>
           </Link>
         </div>
-        <div className='border-t-[1px] border-accent'></div>
         <div className='flex flex-col gap-4 py-4'>
-          <h3 className='text-main_80'>Warum Petite Baleine – kleiner Wal?</h3>
+          <h3 className='text-lg text-main_80'>
+            Warum Petite Baleine – kleiner Wal?
+          </h3>
           <p>
             Keine Angst, Wale gibt’s hier nicht. Aber wir haben im Garten ein
             großes Strandfundstück, das aus der richtigen Perspektive wie ein

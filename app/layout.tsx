@@ -27,13 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang='en'
-      className={`${nunito.variable} ${greatVibes.variable} h-full `}
-    >
-      <body suppressHydrationWarning={true}>
+    <html lang='en' className={`${nunito.variable} ${greatVibes.variable} `}>
+      <body suppressHydrationWarning={true} className='flex h-screen flex-col'>
         <Navbar />
-        <div className='relative z-20 pt-[110px]'>{children}</div>
+        <div className='relative z-20 flex-grow pt-[110px]'>{children}</div>
         <Footer />
       </body>
     </html>
